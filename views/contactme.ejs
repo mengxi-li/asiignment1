@@ -2,6 +2,50 @@
     <head>
     <title>Services</title>
     <meta charset="utf-8">
+    <style>
+        .topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+.topnav img {
+    float: right
+}
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+    </style>
+    <script>
+     function nav(path)
+     {
+    var url= location.origin+'/'+path
+    window.location.replace(url);
+     }   
+    </script>
+    </head>
+    <body style="font-family:Verdana; background-color:lavenderblush;color:purple;">
+        <div class="topnav">
+            <img src="/assets/LOGO.png"></img>
+            <a class="active" onclick="nav('')">Home</a>
+            <a onclick="nav('aboutme')">About Me</a>
+            <a onclick="nav('project')">Project</a>
+            <a onclick="nav('services')">Services</a>
+            <a onclick="nav('contactme')">Contact Me</a>
+          </div>
     </head>
     <body style="font-family:Verdana; background-color:lavenderblush;color:purple;">
         <div style="width:980px;margin-left:auto;margin-right:auto;">
