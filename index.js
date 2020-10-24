@@ -20,6 +20,12 @@ app.get('/project', function(req, res) {
 app.get('/services', function(req, res) {
   res.render('services');
 });
+app.get('/login', function(req, res) {
+  res.render('login');
+});
+app.get('/contact', function(req, res) {
+  res.render('contact');
+});
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })

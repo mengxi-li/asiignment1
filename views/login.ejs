@@ -1,6 +1,6 @@
 <html lang="en">
     <head>
-    <title>Project</title>
+    <title>login</title>
     <meta charset="utf-8">
     <style>
         .topnav {
@@ -35,6 +35,14 @@
     var url= location.origin+'/'+path
     window.location.replace(url);
      }   
+     function login(){
+      var username= document.getElementById("username").value;
+      var password= document.getElementById("password").value;
+      console.log(username,password)
+      if (username==1349172249&&password==666666) {
+       nav('contact');
+}
+     }
     </script>
     </head>
     <body style="font-family:Verdana; background-color:lavenderblush;color:purple;">
@@ -49,14 +57,13 @@
             <a onclick="nav('contact')">contact</a>
           </div>
     </head>
-    <body style="font-family:Verdana; background-color:lavenderblush;color:purple;">
-        <div style="width:980px;margin-left:auto;margin-right:auto;">
-          <p>The first picture is about BMR calculator that can measure people's health by using a mathematical formula. The second picture is my project that can calculate all possibilities when you enter a number. The last picture is the "taking a order" function that can calculate the total prices including tax.  </p>
-          <img src="assets/project1.png" width="600" height="550" style="float:right" ></img>
-          <img src="assets/project2.png" width="600" height="600" style="float:right" ></img>
-          <img src="assets/project3.png" width="400" height="550" style="float:right" ></img>
-</footer>
-<h6>&copy;&nbsp;Copyright Mengxi Li-COMP229-Winter 2020</h6>
-</div>
-</body>
-</html>
+    <form>
+      <label for="username">username:</label><br>
+      <input type="text" id="username" name="username" value="" required><br>
+      <label for="password">password:</label><br>
+      <input type="password" id="password" name="password" value="" required><br>
+      <button type="button" class="login" onclick="login()">login</button>
+      <button type="button" class="cancelbtn">Cancel</button>
+    </form>
+    </body>
+    </html>

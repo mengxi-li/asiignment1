@@ -1,0 +1,137 @@
+<html lang="en">
+    <head>
+    <title>login</title>
+    <meta charset="utf-8">
+    <style>
+        .topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+.topnav img {
+    float: right
+}
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+    </style>
+    <script>
+        localStorage.setItem("id1", JSON.stringify({
+	name: "Sam",
+  contact: "649-859-5216",
+  email: "sam@gmail.com"
+}))
+
+localStorage.setItem("id2", JSON.stringify({
+	name: "Tracy",
+  contact: "648-985-8496",
+  email: "Tracy@gmail.com"
+}))
+
+localStorage.setItem("id3", JSON.stringify({
+	name: "Mengxi",
+  contact: "647-997-8256",
+  email: "Mengxi@gmail.com"
+}))
+localStorage.setItem("id4", JSON.stringify({
+	name: "Nike",
+  contact: "647-997-8656",
+  email: "Nike@gmail.com"
+}))
+localStorage.setItem("id5", JSON.stringify({
+	name: "Mars",
+  contact: "647-997-8556",
+  email: "Mars@gmail.com"
+}))
+     function nav(path)
+     {
+    var url= location.origin+'/'+path
+    window.location.replace(url);
+     }   
+     function update(rowid)
+     {
+        document.getElementById("nameinput"+rowid).innerHTML="<input></input>"
+        document.getElementById("contactinput"+rowid).innerHTML="<input></input>"
+        document.getElementById("emailinput"+rowid).innerHTML="<input></input>"
+     }
+     function save(){
+      var name= document.getElementById("nameinput"+rowid).value;
+      var contact= document.getElementById("contactinput"+rowid).value;
+      var email= document.getElementById("emailinput"+rowid).value;
+
+       }
+     function de(rowid)
+     {
+    document.getElementById("in"+rowid).remove()
+     }
+    </script>
+    </head>
+    <body style="font-family:Verdana; background-color:lavenderblush;color:purple;">
+        <div class="topnav">
+            <img src="/assets/LOGO.png"></img>
+            <a class="active" onclick="nav('')">Home</a>
+            <a onclick="nav('aboutme')">About Me</a>
+            <a onclick="nav('project')">Project</a>
+            <a onclick="nav('services')">Services</a>
+            <a onclick="nav('contactme')">Contact Me</a>
+            <a onclick="nav('login')">login</a>
+            <a onclick="nav('contact')">contact</a>
+          </div>
+          <table style="width:100%">
+            <tr>
+              <th>Name</th>
+              <th>Number</th>
+              <th>Email</th>
+            </tr>
+            <tr id="in1">
+              <td id="nameinput1">Sam</td>
+              <td id="contactinput1">649-859-5216</td>
+              <td id="emailinput1">sam@gmail.com</td>
+              <td><button onclick="update('1')">update</button></td>
+              <td><button onclick="de('1')">delete</button></td>
+            </tr>
+            <tr id="in2">
+              <td id="nameinput2">Tracy</td>
+              <td id="contactinput2">648-985-8496</td>
+              <td id="emailinput2">Tracy@gmail.com</td>
+              <td><button onclick="update('2')">update</button></td>
+              <td><button onclick="de('2')">delete</button></td>
+            </tr>
+            <tr id="in3">
+                <td id="nameinput3">Mengxi</td>
+                <td id="contactinput3">647-997-8256</td>
+                <td id="emailinput3">Mengxi@gmail.com</td>
+                <td><button onclick="update('3')">update</button></td>
+                <td><button onclick="de('3')">delete</button></td>
+              </tr>
+              <tr id="in4">
+                <td id="nameinput4">Nike</td>
+                <td id="contactinput4">647-997-8656</td>
+                <td id="emailinput4">Nike@gmail.com</td>
+                <td><button onclick="update('4')">update</button></td>
+                <td><button onclick="de('4')">delete</button></td>
+              </tr>
+              <tr id="in5">
+                <td id="nameinput5">Mars</td>
+                <td id="contactinput5">647-997-8556</td>
+                <td id="emailinput5">Mars@gmail.com</td>
+                <td><button onclick="update('5')">update</button></td>
+                <td><button onclick="de('5')">delete</button></td>
+              </tr>
+          </table>
+          </body>
+          </html>
